@@ -13,7 +13,7 @@ function createMenuItem(name,price,type) {
 }
 
 function addIngredients(item, ingredients) {
-   if (!ingredients.includes(item)){
+  if (!ingredients.includes(item)){
     ingredients.push(item);
    }
     return ingredients;
