@@ -8,13 +8,13 @@ var {
   searchOrder
 } = require("../src/order");
 
-describe("order.js", function() {
-  describe("takeOrder", function() {
-    it.skip("should be a function", function() {
+describe("order.js", function () {
+  describe("takeOrder", function () {
+    it("should be a function", function () {
       assert.isFunction(takeOrder);
     });
 
-    it.skip("should add new orders to an order type list", function() {
+    it("should add new orders to an order type list", function () {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -40,7 +40,7 @@ describe("order.js", function() {
       assert.equal(deliveryOrders[1], order2);
     });
 
-    it.skip("should add another order to an order type list", function () {
+    it("should add another order to an order type list", function () {
 
       var order1 = {
         orderNumber: 1,
@@ -76,7 +76,7 @@ describe("order.js", function() {
       assert.equal(takeOutOrders[2], order3);
     });
 
-    it.skip("should not be able to hold more than 3 orders at a time", function() {
+    it("should not be able to hold more than 3 orders at a time", function () {
       var order1 = {
         orderNumber: 12342,
         item: "burger",
@@ -117,14 +117,14 @@ describe("order.js", function() {
       assert.equal(deliveryOrders.length, 3);
       assert.deepEqual(deliveryOrders, [order1, order2, order3]);
     });
-  }); 
+  });
 
-  describe("refundOrder", function() {
-    it.skip("should be a function", function () {
+  describe("refundOrder", function () {
+    it("should be a function", function () {
       assert.isFunction(refundOrder);
     });
 
-    it.skip("should remove an order by order number", function() {
+    it("should remove an order by order number", function () {
       var order1 = {
         orderNumber: 1657,
         item: "burger",
@@ -157,7 +157,7 @@ describe("order.js", function() {
       assert.deepEqual(deliveryOrders, [order2, order3])
     });
 
-    it.skip("should remove a different order by order number", function () {
+    it("should remove a different order by order number", function () {
       var order1 = {
         orderNumber: 1241,
         item: "burger",
@@ -191,12 +191,12 @@ describe("order.js", function() {
     });
   });
 
-  describe("listOrders", function() {
-    it.skip("should be a function", function () {
+  describe("listOrders", function () {
+    it("should be a function", function () {
       assert.isFunction(listItems);
     });
 
-    it.skip("should list out all of the order items by name", function() {
+    it.only("should list out all of the order items by name", function () {
       var order1 = {
         orderNumber: 1,
         item: "burger",
@@ -263,12 +263,12 @@ describe("order.js", function() {
     });
   });
 
-  describe("searchOrder", function() {
+  describe("searchOrder", function () {
     it.skip("should be a function", function () {
       assert.isFunction(searchOrder);
     });
 
-    it.skip("should tell us if an order is in the list", function() {
+    it.skip("should tell us if an order is in the list", function () {
       var order1 = {
         orderNumber: 1234,
         item: "burger",
